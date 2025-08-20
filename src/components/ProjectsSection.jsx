@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { resolveAssetPath } from '../utils/assets';
 import { useIntersectionObserver } from '../hooks';
 
 const ProjectsSection = ({ projectsRef, projects, setSelectedProject, onProjectsVisibleChange }) => {
@@ -61,10 +62,35 @@ const ProjectsSection = ({ projectsRef, projects, setSelectedProject, onProjects
               {/* Project Image */}
               <div className="project-card__image-wrapper">
                 <img
-                  src={project.image}
+                  src={resolveAssetPath(project.image)}
                   alt={project.title}
                   className="project-card__image transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    // prevent infinite loop
+                    target.onerror = null;
+                    try { console.warn('Project image failed to load:', target.src); } catch (_) {}
+                    const placeholder = `data:image/svg+xml;utf8,${encodeURIComponent(
+                      `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'>\n` +
+                      `  <defs>\n` +
+                      `    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>\n` +
+                      `      <stop offset='0%' stop-color='#334155'/>\n` +
+                      `      <stop offset='100%' stop-color='#1f2937'/>\n` +
+                      `    </linearGradient>\n` +
+                      `  </defs>\n` +
+                      `  <rect width='800' height='450' fill='url(#g)'/>\n` +
+                      `  <g fill='none' stroke='#94a3b8' stroke-width='2' opacity='0.4'>\n` +
+                      `    <rect x='40' y='40' width='720' height='370' rx='24'/>\n` +
+                      `  </g>\n` +
+                      `  <g fill='#e2e8f0' opacity='0.85' font-family='Inter, Arial, sans-serif' text-anchor='middle'>\n` +
+                      `    <text x='400' y='230' font-size='28'>${project.title.replace(/&/g, '&amp;')}</text>\n` +
+                      `    <text x='400' y='270' font-size='16' fill='#cbd5e1'>Image not available</text>\n` +
+                      `  </g>\n` +
+                      `</svg>`
+                    )}`;
+                    target.src = placeholder;
+                  }}
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

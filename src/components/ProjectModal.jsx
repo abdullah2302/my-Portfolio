@@ -1,4 +1,5 @@
 import React from 'react';
+import { resolveAssetPath } from '../utils/assets';
 
 const ProjectModal = ({ selectedProject, setSelectedProject }) => {
   if (!selectedProject) return null;
@@ -19,9 +20,10 @@ const ProjectModal = ({ selectedProject, setSelectedProject }) => {
         </h2>
         <div className="mb-3">
           <img
-            src={selectedProject.image}
+            src={resolveAssetPath(selectedProject.image)}
             alt={selectedProject.title}
             className="w-full max-h-48 object-contain rounded-md bg-gray-800/50"
+            loading="lazy"
           />
         </div>
         <p className="text-xs sm:text-sm text-gray-300 mb-3">{selectedProject.desc}</p>

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useParticles } from '../hooks';
 
-const HomeSection = ({ homeRef, particles, scrollToSection }) => {
+const HomeSection = ({ homeRef, scrollToSection }) => {
+  const particles = useParticles(50);
   return (
     <section
       id="home"

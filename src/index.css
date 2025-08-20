@@ -612,3 +612,20 @@ html {
   object-position: center;
   display: block;
 }
+
+/* Fallback heights if aspect-ratio is not supported */
+@supports not (aspect-ratio: 1 / 1) {
+  .project-card__image-wrapper {
+    height: 14rem; /* ~h-56 */
+  }
+  @media (min-width: 640px) {
+    .project-card__image-wrapper {
+      height: 16rem; /* ~h-64 */
+    }
+  }
+  @media (min-width: 1024px) {
+    .project-card__image-wrapper {
+      height: 18rem; /* ~h-72 */
+    }
+  }
+}
