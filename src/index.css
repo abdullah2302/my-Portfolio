@@ -183,7 +183,7 @@ body {
   z-index: 5; /* Above background, below content */
 }
 
-a:focus, button:focus {
+a:focus:not(.scroll-indicator), button:focus:not(.scroll-indicator) {
   outline: 2px solid #FF8787;
   outline-offset: 2px;
   transform: scale(1.05);
@@ -568,6 +568,30 @@ html {
   justify-content: center;
   align-items: flex-start;
   transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+/* Hide border while clicking/pressing the indicator */
+.scroll-indicator:active .scroll-indicator__shell {
+  border-color: transparent;
+  border: none;
+}
+
+/* Remove orange/pink outline on click/focus for scroll indicator only */
+.scroll-indicator {
+  -webkit-tap-highlight-color: transparent;
+}
+.scroll-indicator:focus,
+.scroll-indicator:focus-visible,
+.scroll-indicator:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* Also hide the shell border on focus for consistent look */
+.scroll-indicator:focus .scroll-indicator__shell,
+.scroll-indicator:focus-visible .scroll-indicator__shell {
+  border-color: transparent;
+  border: none;
 }
 
 @keyframes indicator-pulse {
