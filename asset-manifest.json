@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-Portfolio/static/css/main.9e1a43c1.css",
-    "main.js": "/my-Portfolio/static/js/main.5b30dc21.js",
+    "main.js": "/my-Portfolio/static/js/main.aaf07f88.js",
     "static/js/660.1ed22073.chunk.js": "/my-Portfolio/static/js/660.1ed22073.chunk.js",
     "static/js/445.7bb93019.chunk.js": "/my-Portfolio/static/js/445.7bb93019.chunk.js",
     "static/js/254.d5b5074c.chunk.js": "/my-Portfolio/static/js/254.d5b5074c.chunk.js",
@@ -9,10 +9,10 @@
     "static/js/45.4bf09274.chunk.js": "/my-Portfolio/static/js/45.4bf09274.chunk.js",
     "static/js/919.b35414c0.chunk.js": "/my-Portfolio/static/js/919.b35414c0.chunk.js",
     "static/js/246.fa4485b7.chunk.js": "/my-Portfolio/static/js/246.fa4485b7.chunk.js",
-    "static/js/990.763e2580.chunk.js": "/my-Portfolio/static/js/990.763e2580.chunk.js",
+    "static/js/990.5b06b10f.chunk.js": "/my-Portfolio/static/js/990.5b06b10f.chunk.js",
     "index.html": "/my-Portfolio/index.html",
     "main.9e1a43c1.css.map": "/my-Portfolio/static/css/main.9e1a43c1.css.map",
-    "main.5b30dc21.js.map": "/my-Portfolio/static/js/main.5b30dc21.js.map",
+    "main.aaf07f88.js.map": "/my-Portfolio/static/js/main.aaf07f88.js.map",
     "660.1ed22073.chunk.js.map": "/my-Portfolio/static/js/660.1ed22073.chunk.js.map",
     "445.7bb93019.chunk.js.map": "/my-Portfolio/static/js/445.7bb93019.chunk.js.map",
     "254.d5b5074c.chunk.js.map": "/my-Portfolio/static/js/254.d5b5074c.chunk.js.map",
@@ -20,10 +20,10 @@
     "45.4bf09274.chunk.js.map": "/my-Portfolio/static/js/45.4bf09274.chunk.js.map",
     "919.b35414c0.chunk.js.map": "/my-Portfolio/static/js/919.b35414c0.chunk.js.map",
     "246.fa4485b7.chunk.js.map": "/my-Portfolio/static/js/246.fa4485b7.chunk.js.map",
-    "990.763e2580.chunk.js.map": "/my-Portfolio/static/js/990.763e2580.chunk.js.map"
+    "990.5b06b10f.chunk.js.map": "/my-Portfolio/static/js/990.5b06b10f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9e1a43c1.css",
-    "static/js/main.5b30dc21.js"
+    "static/js/main.aaf07f88.js"
   ]
 }
