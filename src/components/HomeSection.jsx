@@ -18,7 +18,7 @@ const HomeSection = ({ homeRef, scrollToSection }) => {
       </div>
 
       {/* Animated Particles */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      <div className="absolute inset-0 pointer-events-none z-0 will-change-transform">
         {particles.map((particle, i) => (
           <div
             key={i}

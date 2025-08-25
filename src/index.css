@@ -174,6 +174,19 @@ body {
   z-index: 0; /* Lowest layer */
 }
 
+/* Reduce heavy animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .particle,
+  .animate-bounce,
+  .animate-float,
+  .animate-glow,
+  .animate-fade-in-up,
+  .animate-fade-in-left,
+  .animate-fade-in-right {
+    animation: none !important;
+  }
+}
+
 .particle {
   position: absolute;
   background: #ac09ec; /* Coral color */

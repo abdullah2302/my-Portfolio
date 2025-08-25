@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   const socialLinks = [
     {
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/abdullah2302',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path

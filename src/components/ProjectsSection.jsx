@@ -64,8 +64,9 @@ const ProjectsSection = ({ projectsRef, projects, setSelectedProject, onProjects
                 <img
                   src={resolveAssetPath(project.image)}
                   alt={project.title}
-                  className="project-card__image transition-transform duration-500 group-hover:scale-110"
+                  className="project-card__image transition-transform duration-300 group-hover:scale-105 will-change-transform"
                   loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     const target = e.currentTarget;
                     // prevent infinite loop

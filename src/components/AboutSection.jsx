@@ -158,9 +158,9 @@ const AboutSection = ({ aboutRef, skills }) => {
             </p>
           </div>
         </div>
-
-        {/* Skills Progress Visualization */}
-                 <div className={`mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 transition-all duration-1000 transform ${
+      </div>
+       {/* Skills Progress Visualization */}
+       <div className={`mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 transition-all duration-1000 transform ${
            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
          }`} style={{ transitionDelay: '1000ms' }}>
           {skills.map((skill, index) => (
@@ -216,7 +216,6 @@ const AboutSection = ({ aboutRef, skills }) => {
             </div>
           ))}
         </div>
-      </div>
 
       {/* SVG Gradients */}
       <svg width="0" height="0">
